@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 1</title>
+</head>
+<body>
+    <h1>Experiment 1</h1>
+    <h2>Please open console following the next steps</h2>
+    <ul>
+        <li>Ensure you are in Chrome</li>
+        <li>Right click and select inspect</li>
+        <li>Find Console on the tool bar of right inspect window</li>
+    </ul>
+
+<script>
+
+    var num = parseInt(prompt("Enter the number of rows to generate Pascal's Triangle:"), 10);
+
+    if (!isNaN(num) && num > 0) {
+        var triangle = [];
+
+
+        for (var i = 0; i < num; i++) {
+            var row = [1]; 
+            for (var j = 1; j < i; j++) {
+                var value = triangle[i - 1][j - 1] + triangle[i - 1][j];
+                row.push(value);
+            }
+
+            if (i > 0) {
+                row.push(1);
+            }
+            triangle.push(row);
+        }
+        for (var i = 0; i < triangle.length; i++) {
+            console.log(triangle[i].join(' '));
+        }
+    } else {
+        console.log("Invalid input. Please enter a positive number.");
+    }
+</script>
+
+        
+</body>
+</html>
