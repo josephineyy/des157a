@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS Experimentation 2</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 50px;
+      background-color: #f9f9f9;
+    }
+    #message {
+      font-size: 1.5em;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Color Guessing Game</h1>
+  <p>Guess the color I'm thinking of: red, blue, green, or yellow.</p>
+  <button id="startGame">Start Game</button>
+  <div id="message"></div>
+  <script>
+    // This program is a color guessing game. The user inputs a color, and the computer generates a random color. The program checks if the user's guess is correct and updates the page dynamically.
+
+    function getRandomColor() {
+      const colors = ["red", "blue", "green", "yellow"];
+      const randomIndex = Math.floor(Math.random() * colors.length);
+      return colors[randomIndex];
+    }
+
+    function startGame() {
+      const computerColor = getRandomColor();
+      let userColor = prompt("I'm thinking of a color (red, blue, green, yellow). What's your guess?");
+
+      while (userColor !== computerColor) {
+
+        userColor = prompt(`Wrong! Try again. (Hint: The color is ${computerColor[0].toUpperCase()}...)`);
+      }
+
+      document.querySelector("#message").innerText = `Correct! The color was ${computerColor}.`;
+      document.body.style.backgroundColor = computerColor;
+    }
+
+    document.querySelector("#startGame").addEventListener("click", startGame);
+  </script>
+</body>
+</html>
