@@ -58,7 +58,7 @@ main{
 
 }
 
-.swc .pizza{
+.swc, .pizza{
     flex:1;
     width: 50%;
 }
@@ -114,12 +114,32 @@ input[type=text]:focus{
 #hotdog{
     position: absolute;
     margin-left: 250px;
-    margin-top: -50px;
+    margin-top: -0px;
+    z-index: 2;
 }
 
 .show{
-    visibility: show;
+    visibility: visible;
 }
 .hidden{
     visibility: hidden;
+}
+
+.madlib {
+    font-family: jua;
+    font-size: 24px;
+    color:#303d00;
+    position:absolute;
+    top:50px;
+    right:80px;
+    max-width: 40%;
+    margin: auto;
+    background-color: #DAF5F9;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+.special{
+    color:#303d00
 }

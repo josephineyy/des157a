@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
+    <script src="data.js" defer> </script>
     <title>Document</title>
 </head>
 <body>
@@ -23,26 +24,28 @@
         
         <section id="food">
                 <picture class="swc">
-                    <img src="../images/swc.png" width="120" height="120">
+                    <img src="../images/swc.png" width="120" height="120" alt="sandwich">
                 </picture>
                 <picture class="pizza">
-                    <img src="../images/pizza.png" width="120" height="120">
+                    <img src="../images/pizza.png" width="120" height="120" alt="pizza">
                 </picture>
                 
                 <picture class="pizza">
-                    <img src="../images/pizza.png" width="120" height="120">
+                    <img src="../images/pizza.png" width="120" height="120" alt="pizza">
                 </picture>  
                 <picture class="swc">
-                    <img src="../images/swc.png" width="120" height="120">
+                    <img src="../images/swc.png" width="120" height="120" alt="sandwich">
                 </picture>
                           
         </section>
     </header>
     <main>
         <picture id="hotdog">
-            <img src="../images/hotdog.png">
+            <img src="../images/hotdog.png" alt="hotdog">
         </picture>
-      <form action="post" method="post" class="form-container">
+        <section>
+        <!-- <p class="madlib"></p> -->
+        <form action="post" method="post" class="form-container">
         <div class="form-group">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
@@ -85,9 +88,13 @@
         </div>
             <input type="submit" id="submit" value="Create Your Own Experience">
     </form>
+        
+        </section>
+      
+    <p class="madlib"></p>
     </main>
     </div>
     
     
-</body></label>
+</body>
 </html>
