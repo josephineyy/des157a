@@ -1,65 +1,108 @@
-header{
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 4px solid black ;
-    margin-bottom: 40px;
+@font-face {
+    font-family: 'Showcard Gothic';
+    src: url('fonts/ShowcardGothic.woff2') format('woff2'),
+         url('fonts/ShowcardGothic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
-body{
-    max-width: 1200px;
-    margin:auto
+h1,h2{
+    font-family: 'Showcard Gothic';
 }
-
-.post{
-    
-    margin:40px 200px;
-    padding:20px 60px;
-    border-radius: 5%;
-    background-color: rgba(217,217,217,30%);
-    border-right: 4px solid rgba(217,217,217,50%) ;
-    border-bottom: 4px solid rgba(217,217,217,50%) ;
-    
+h1{
+    font-size: 40px;
+    margin: 0;
 }
-.postheads{
-    margin:20px 0;
-    display: flex;
-    gap:40px;
-}
-
-time{
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-}
-
-p,h2,time,a{
-    color: #000;
-    font-family: Inter;
-    font-size: 20px;
+h2{
+    color: #9F79FF;
+    font-family: "Showcard Gothic";
+    font-size: 32px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    margin: 0;
 }
-
-.source{
-    color:darkblue;
+span{
+    color: #4926a0;
 }
-
-h2{
-    font-weight: 700;
-    padding: 0;
-    margin:0;
-    font-size: 24px;
+body {
+    max-width: 1200px;
+    max-height: 720px; 
     display: flex;
-    flex-direction: column;
-    justify-content: end;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    /* padding: 20px; */
 }
 
-#home,#name{
+.side {
+    flex: 1.1;
+    height: 720px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0 20px;
-    margin:0;
+    align-items: center;
+    padding: 20px;
+    border-left: #000 solid 5px;
+    border-right: #000 solid 5px;
+}
+
+.img {
+    flex: 3;
+    height: 750px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.goods {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px; 
+    justify-content: center;
+    align-items: center;
+}
+
+picture {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    justify-content: center;
+    border: 1px solid #000;
+   
+}
+
+picture img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover; 
+    border-radius: 10px;
+     transition: transform 0.6s ease-in;
+}
+
+figcaption {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.unselected{
+    /* width: 40%;
+    height:40%; */
+    border: 3px dashed #000;
 
 }
+.selected{
+    border: 3px solid #4926a0;
+}
+
+picture:hover img{
+    transform:scale(1.2);
+}
+
+
+.purple{
+    border: 3px solid #4926a0;
+}
+
