@@ -1,0 +1,135 @@
+@font-face {
+    font-family: 'Showcard Gothic';
+    src: url('fonts/ShowcardGothic.woff2') format('woff2'),
+         url('fonts/ShowcardGothic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1,h2{
+    font-family: 'Showcard Gothic';
+}
+h1{
+    font-size: 40px;
+    margin: 0;
+}
+h2{
+    color: #9F79FF;
+    font-family: "Showcard Gothic";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+}
+span{
+    color: #4926a0;
+}
+body {    
+    max-width: 1200px;
+    max-height: 720px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    /* padding: 20px; */
+}
+
+.side {
+    flex: 1.1;
+    height: 720px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-left: #000 solid 5px;
+    border-right: #000 solid 5px;
+}
+
+.img {
+    flex: 3;
+    height: 750px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.goods {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px; 
+    justify-content: center;
+    align-items: center;
+}
+
+picture {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    justify-content: center;
+    border: 1px solid #000;
+   
+}
+
+picture img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover; 
+    border-radius: 10px;
+     transition: transform 0.6s ease-in;
+}
+
+figcaption {
+    font-family: Roboto;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+.unselected{
+    /* width: 40%;
+    height:40%; */
+    border: 3px dashed #000;
+
+}
+.selected{
+    border: 3px solid #4926a0;
+}
+
+.bubble:hover img{
+    transform:scale(1.2);
+}
+.chair:hover img{
+    transform:scale(1.2);
+}
+.shelf:hover img{
+    transform:scale(1.2);
+}
+.sofa:hover img{
+    transform:scale(1.2);
+}
+
+
+
+
+
+.purple{
+    border: 3px solid #4926a0;
+}
+
+#cat img{
+    margin: 20px;
+
+}
+#cat{
+    padding: 0;
+    min-height: 380px;
+    flex-direction: column;
+    align-items: center;  
+    justify-content: center;
+}
+#cat figcaption{
+    width: 60%;
+    margin-bottom: 20px;
+}
